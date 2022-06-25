@@ -1,5 +1,5 @@
 import React from "react";
-import TodoItem from "../MyComponents/TodoItem";
+import TodoItem from "./TodoItem";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 

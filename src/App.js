@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import AddTodo from "./MyComponents/AddTodo";
 import Todos from "./MyComponents/Todos";
+import Header from "./MyComponents/Header";
+import Footer from './MyComponents/Footer';
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -43,8 +45,10 @@ function App() {
   return (
     <div className="App">
     <>
+    <Header title="Assignment-one" searchBar={false}/>
               <AddTodo addTodo={addTodo}></AddTodo>
               <Todos todos={todos} onDelete={onDelete}/></>
+              <Footer></Footer>
     </div>
   );
 }

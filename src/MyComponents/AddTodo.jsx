@@ -21,19 +21,16 @@ const AddTodo = (props) => {
       setTitle("");
       
       }}
-     
-    // const HandleSubmit = (e)=>{
-    //   e.preventDefault();
-    // setTitle(e.target.value)
-   
 
-    // }
     return (
+    
       <div className="container my-9">
-        <h3>Add a Backlog List</h3>
+            
+        <h4>Add a Backlog List</h4>
+  
         <form onSubmit={submit}>
           <div className="mb-3">
-
+          {/* <div className="pull-left"> */}
             <input
               type="text"
               placeholder='Please Name Backlog…'
@@ -47,12 +44,14 @@ const AddTodo = (props) => {
             />
           </div>
      
-  
+        
           <button type="submit" className="btn btn-sm btn-primary">
             Add Backlog
           </button>
+          {/* </div> */}
         </form>
-      </div>
+        </div>
+    
     );
   };
 
