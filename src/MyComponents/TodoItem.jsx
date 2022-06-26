@@ -1,42 +1,21 @@
 import React, { useState } from "react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const TodoItem = ({ todo, onDelete }) => {
-  const[value, setValue]= useState([])
-console.log(value)
-  let move=(e)=>{
-    setValue(e)
-    // console.log(e);
-
-  }
+const TodoItem = (props) => {
   return (
-    <div>
-      <h4> {todo.title}</h4>
-      <div className="pull-right">
-        {!todo.title ? (
-          <button>
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </button>
-        ) : (
-          <button>
-            <FontAwesomeIcon onClick={()=>{move()}} icon={faArrowRight} />
-          </button>
-        )}
+    <div className="row">
+      <h4 className="col-sm-4"> {props?.name}</h4>
+      <div className="col-sm-5">
+          <FontAwesomeIcon onClick={props.moveLeftTodoAction} className="p-1 mx-1 border bg-light" icon={faArrowLeft} />
+          <FontAwesomeIcon onClick={props.moveRightAction} className="p-1 mx-1 border bg-light" icon={faArrowRight} />
+          <FontAwesomeIcon onClick={props.removeTodoAction} className="p-1 mx-1 border bg-light" icon={faClose} />
       </div>
-
-      <button
-        className="btn btn-sm btn-danger"
-        onClick={() => {
-          onDelete(todo);
-        }}
-      >
-        Delete
-      </button>
-      <hr />
     </div>
   );
 };
+
+
 
 export default TodoItem;

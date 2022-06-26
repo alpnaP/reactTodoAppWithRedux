@@ -1,8 +1,11 @@
 
 import React, { useState } from "react";
+import { connect } from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
 
 const regexPattern = new RegExp(/^([A-Za-z]|[0-9]|_)+$/)
 const AddTodo = (props) => {
+  console.log(props)
 
     const [title, setTitle] = useState("");
     const submit = (e) => {
@@ -17,17 +20,13 @@ const AddTodo = (props) => {
   
       }
       else{
-        props.addTodo(title);
-      setTitle("");
-      
+        debugger
+        props.addTodoAction({ name: title, stage: 0, cid: uuidv4() });
+        setTitle("");
       }}
-
     return (
-    
-      <div className="container my-9">
-            
+      <div className="container my-9 ">
         <h4>Add a Backlog List</h4>
-  
         <form onSubmit={submit}>
           <div className="mb-3">
           {/* <div className="pull-left"> */}
@@ -54,5 +53,11 @@ const AddTodo = (props) => {
     
     );
   };
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      // dispatching plain actions
+      addTodoAction: (data) => dispatch({ type: 'ADD_TODO',value:data }),
+    }
+  }
 
-export default AddTodo
+export default connect(null, mapDispatchToProps)(AddTodo)
