@@ -7,19 +7,19 @@ import React from 'react'
 
 function Header(props) {
     const myStyle = {
-        textAlign: 'center', // <-- the magic
+        textAlign: 'text-center', 
         fontWeight: 'bold',
         fontSize: 18,
         marginTop: 0,
         width: 200,
-        backgroundColor: 'green',
+       
       };
   return (
   
 
         
-<nav  className="navbar navbar-expand-lg navbar-light bg-light">
-  <a style={myStyle} className="navbar-brand" >{props.title}</a>
+<nav  className="navbar navbar-dark bg-info">
+  <a style={myStyle} className="navbar-brand text-center" >{props.title}</a>
 
 </nav>
  

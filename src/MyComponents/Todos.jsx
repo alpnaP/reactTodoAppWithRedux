@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import { connect } from 'react-redux'
-// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-// import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Todos(props) {
   let myStyle = {
     minHeight: "70vh",
@@ -35,7 +32,7 @@ function Todos(props) {
 
   return (
     <div className="container my-3" style={myStyle}>
-      <h3 className="my-3">Backlog Table List</h3>
+      <h3 className="my-3">Backlog List</h3>
       <div class="row">
         <div class="col-sm-3">
           <h3>Backlog</h3>

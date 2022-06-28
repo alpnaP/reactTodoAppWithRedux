@@ -4,6 +4,13 @@ import { connect } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
 const regexPattern = new RegExp(/^([A-Za-z]|[0-9]|_)+$/)
+const innerPageStyle = {
+
+  marginTop: 30,
+
+ 
+};
+
 const AddTodo = (props) => {
   console.log(props)
 
@@ -15,7 +22,7 @@ const AddTodo = (props) => {
         alert("Backlog can't be blank");
       }
       else if(!regexPattern.test(title)){
-        alert("Not Matched")
+        alert("Not Matched") 
         setTitle("");
   
       }
@@ -25,14 +32,14 @@ const AddTodo = (props) => {
         setTitle("");
       }}
     return (
-      <div className="container my-9 ">
-        <h4>Add a Backlog List</h4>
+      <div  className="container my-9 ">
+        <h4  style={innerPageStyle}>Add New Backlog </h4>
         <form onSubmit={submit}>
           <div className="mb-3">
-          {/* <div className="pull-left"> */}
+       
             <input
               type="text"
-              placeholder='Please Name Backlog…'
+              placeholder='Please Add Backlog…'
               value={title}
               onChange={(e) => 
                 setTitle(e.target.value)
@@ -47,7 +54,7 @@ const AddTodo = (props) => {
           <button type="submit" className="btn btn-sm btn-primary">
             Add Backlog
           </button>
-          {/* </div> */}
+       
         </form>
         </div>
     
