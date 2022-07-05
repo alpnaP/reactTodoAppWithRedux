@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="Assignment-one [Task Management]" searchBar={false} />
+      <Header title="Assignment-one [Task Management by using Redux]" searchBar={false} />
       <AddTodo />
       <Todos />
       <Footer/>

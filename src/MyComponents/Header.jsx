@@ -18,7 +18,7 @@ function Header(props) {
   
 
         
-<nav  className="navbar navbar-dark bg-info">
+<nav  className="navbar navbar-dark bg-secondary ">
   <a style={myStyle} className="navbar-brand text-center" >{props.title}</a>
 
 </nav>

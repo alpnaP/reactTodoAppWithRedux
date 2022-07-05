@@ -35,7 +35,7 @@ const AddTodo = (props) => {
       <div  className="container my-9 ">
         <h4  style={innerPageStyle}>Add New Backlog </h4>
         <form onSubmit={submit}>
-          <div className="mb-3">
+          <div className="mb-3 row">
        
             <input
               type="text"
@@ -44,16 +44,17 @@ const AddTodo = (props) => {
               onChange={(e) => 
                 setTitle(e.target.value)
               }
-              className="form-control"
+              className="input-css col-sm-10 "
               id="title"
               aria-describedby="emailHelp"
             />
+              <button type="submit" className=" col-sm-2 btn btn-sm btn-primary">
+            Add Backlog
+          </button>
           </div>
      
         
-          <button type="submit" className="btn btn-sm btn-primary">
-            Add Backlog
-          </button>
+        
        
         </form>
         </div>
