@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { connect } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
-const regexPattern = new RegExp(/^([A-Za-z]|[0-9]|_)/)
+const regexPattern = new RegExp(/^([A-Za-z]|[0-9]|_)+$/)
 const innerPageStyle = {
   marginTop: 30,
 };
@@ -13,10 +13,10 @@ const AddTodo = (props) => {
   const submit = (e) => {
     e.preventDefault();
     if (!title) {
-      alert("Backlog Name can't be blank");
+      alert("Backlog Name can't be blank!");
     }
     else if (!regexPattern.test(title)) {
-      alert("Not Matched Pattern")
+      alert("Validation Failed!")
       setTitle("");
 
     }
