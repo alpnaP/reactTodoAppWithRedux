@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../App.css';
-const TodoItem = (props) => {
+const Card = (props) => {
   return (
     <div className="card mb-2">
     <div className="row">
@@ -19,6 +19,4 @@ const TodoItem = (props) => {
   );
 };
 
-
-
-export default TodoItem;
+export default Card;

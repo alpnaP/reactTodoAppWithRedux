@@ -1,13 +1,18 @@
-
 import React, { useState } from "react";
 import { connect } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
+/* Validation regex pattern */
 const regexPattern = new RegExp(/^([A-Za-z]|[0-9]|_)+$/)
+
+/* Inner Page Style */
 const innerPageStyle = {
   marginTop: 30,
 };
 
+/* 
+* Adding New todo action item
+*/
 const AddTodo = (props) => {
   const [title, setTitle] = useState("");
   const submit = (e) => {
@@ -50,9 +55,10 @@ const AddTodo = (props) => {
 
   );
 };
+
+/*dispatching plain actions */
 const mapDispatchToProps = (dispatch) => {
   return {
-    // dispatching plain actions
     addTodoAction: (data) => dispatch({ type: 'ADD_TODO', value: data }),
   }
 }

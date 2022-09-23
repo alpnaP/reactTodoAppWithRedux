@@ -1,13 +1,11 @@
-// import logo from './logo.svg';
 import { connect } from 'react-redux';
 import './App.css';
-import AddTodo from "./MyComponents/AddTodo";
-import Footer from './MyComponents/Footer';
-import Header from "./MyComponents/Header";
-import Todos from "./MyComponents/Todos";
+import AddTodo from "./Components/AddTodo";
+import Footer from './Components/Footer';
+import Header from "./Components/Header";
+import Todos from "./Components/Todos";
 
 function App() {
-
   return (
     <div className="App">
       <Header title="Assignment-one [Task Management by using Redux]" searchBar={false} />
